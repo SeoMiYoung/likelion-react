@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+abbr[title] {
+  cursor: help;
+}
+
+/* 접근성 관련 */
+@media print {
+  abbr[title]::after {
+    content: ' (' attr(title) ')';
+  }
+}
